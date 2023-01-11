@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Quick Message Composer</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" href="assets/css/structure.css">
+	<link rel="stylesheet" href="assets/css/modal.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="assets/js/njtools-core.js"></script>
+	<script defer src="assets/js/njtools-extensions.js"></script>
+	<script defer src="app.js"></script>
+	<script>
+	</script>
+</head>
+<body>
+	<div class="body-blck">
+		<div class="body-cont">
+			<div class="gd-cont">
+				<div class="gd-m9">
+					<h1 id="siteheading">Quick Message Composer</h1>
+				</div>
+				<div id="headingbuttons" class="gd-m3">
+				</div>
+			</div>
+			<div id="contentwrapper">
+				<div id="notificationdiv" class="infonotification">
+				<h4 class="notificationheading">This site requires Javascript</h4>
+				<p class="notificationtext">You are seeing this if you have Javascript disabled, are using a slow internet connection or there is a bug in this site's code.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div modal-wrapper="datadefinitionModal" modal-open="datadefinitionOpen" modal-close="datadefinitionClose" style="display:none;">
+		<h3>Application data definition</h3>
+		<textarea id="page1formdef" name="page1formdef" rows="16" cols="50"></textarea>
+		<pre id="modalErrorBox"></pre>
+		<button style="margin:3px" id="modalSaveButton" onClick="window.njt.event.eventHandler(event)" njteventclick="tryCloseModal">Save</button> <button style="margin:3px" id="modalCancelButton" onClick="window.njt.event.eventHandler(event)" njteventclick="tryCloseModal">Cancel</button> <button style="margin:3px" id="modalResetButton" onClick="window.njt.event.eventHandler(event)" njteventclick="tryCloseModal">Reset to sample</button>
+	</div>
+	<div modal-wrapper="aboutModal" modal-open="aboutOpen" style="display:none;">
+		<h3>About Quick Message Composer</h3>
+		<h4 id="aboutVersion">No version number</h4>
+		<p>This is a demo application for the <a href="https://github.com/nathancrjackson/njtools-js">NJTools.JS</a> library (and technically also <a href="https://github.com/nathancrjackson/structure-css">Structure.CSS</a> framework) written by <a href="https://njit.io/about-me/">Nathan Jackson</a>.</p>
+		<p>If you find yourself using this seriously it has the following keyboard shortcuts when open:</p>
+		<table class="collapsable">
+		<tbody><tr class="hide-s">
+			<th>Key combination</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + &lt;</td>
+			<td>Change page</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + &gt;</td>
+			<td>Change page</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + &quest;</td>
+			<td>Snap to page first input</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + C</td>
+			<td>Copy current page preview</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + Z</td>
+			<td>Clear page and snap to first input</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + R</td>
+			<td>Reset app, return to first page and snap to first input</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + A</td>
+			<td>Bring up this About dialog</td>
+		</tr>
+		<tr>
+			<td class="bold-s">Ctrl + Shift + S</td>
+			<td>Bring up the Settings dialog</td>
+		</tr>
+		</tbody></table>
+	</div>
+	<script>
+	//Turn this puppy into a progressive web app
+	if('serviceWorker' in navigator){
+		console.log('PWA service worker attempting to register');
+		navigator.serviceWorker.register('pwa-worker.js')
+			.then(reg => console.log('PWA registered'))
+			.catch(err => console.log('PWA service worker not registered', err));
+	}
+	</script>
+</body>
+</html>

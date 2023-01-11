@@ -1,0 +1,49 @@
+#siteheading
+{
+	margin: 0.25em 0em 0em 0em;
+}
+
+.headingbutton
+{
+	float: right;
+}
+
+button
+{
+	margin: 0.25em;
+}
+
+th
+{
+	text-align: left;
+}
+
+.notificationheading
+{
+	margin: 0px;
+	color: #111111;
+}
+
+.notificationtext
+{
+	white-space: pre-wrap;
+	color: #111111;
+}
+
+.infonotification
+{
+	background: #d9f5fd;
+	border: 2px solid #6dcff6;
+}
+
+.alertnotification
+{
+	background: #fffee8;
+	border: 2px solid #fff799;
+}
+
+.errornotification
+{
+	background: #fde9e5;
+	border: 2px solid #f69679;
+}

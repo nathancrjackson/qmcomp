@@ -1,0 +1,35 @@
+{
+  "name": "Quick Message Composer",
+  "short_name": "QMComp",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#222222",
+  "theme_color": "#3598E8",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-16x16.png",
+      "type": "image/png", 
+      "sizes": "16x16",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/favicon-32x32.png",
+      "type": "image/png", 
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}
